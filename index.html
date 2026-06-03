@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авторские туры на Кавказ — Людмила Басырова</title>
+<meta name="description" content="Авторские туры на Кавказ. 7 дней / 6 ночей за 39 000 ₽. Эльбрус, Домбай, Осетия, Ингушетия, Безенги.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --dark:#0d1117;--dark2:#161b22;
+  --accent:#e94560;--gold:#f5a623;
+  --green:#2d6a4f;--green2:#52b788;
+  --text:#f0f6fc;--muted:#8b949e;
+  --card:rgba(255,255,255,0.06);--border:rgba(255,255,255,0.1)
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--dark);color:var(--text);overflow-x:hidden}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-thumb{background:var(--accent);border-radius:3px}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
+header.scrolled{background:rgba(13,17,23,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.logo{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:color .2s}
+nav a:hover{color:var(--text)}
+.nav-cta{background:linear-gradient(135deg,var(--accent),#c62a47);color:#fff!important;padding:8px 20px;border-radius:20px;font-weight:600;font-size:.85rem!important;transition:transform .2s,box-shadow .2s!important}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(233,69,96,.4)}
+.burger{display:none;cursor:pointer;font-size:1.5rem;background:none;border:none;color:var(--text)}
+
+/* HERO */
+#hero{min-height:100vh;background:linear-gradient(180deg,rgba(13,17,23,.2) 0%,rgba(13,17,23,.65) 60%,var(--dark) 100%),radial-gradient(ellipse at 25% 35%,#1a3a5c 0,transparent 55%),radial-gradient(ellipse at 75% 65%,#2d1b00 0,transparent 55%),linear-gradient(135deg,#0d1117 0,#1a2744 40%,#2d1b00 100%);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;padding:120px 24px 80px}
+.hero-mountains{position:absolute;bottom:0;left:0;right:0;pointer-events:none}
+.hero-content{max-width:820px;position:relative;z-index:1}
+.hero-badge{display:inline-block;background:rgba(245,166,35,.13);border:1px solid rgba(245,166,35,.38);color:var(--gold);padding:6px 18px;border-radius:20px;font-size:.83rem;font-weight:500;margin-bottom:26px;letter-spacing:.5px}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.6rem,7vw,5rem);font-weight:900;line-height:1.1;margin-bottom:20px;background:linear-gradient(135deg,#fff 0,#e8d5b7 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero-sub{font-size:clamp(1rem,2.5vw,1.25rem);color:rgba(240,246,252,.72);margin-bottom:14px;font-weight:300;line-height:1.65}
+.price-badge{display:inline-block;background:linear-gradient(135deg,var(--accent),#c62a47);color:#fff;font-weight:700;font-size:1.08rem;padding:10px 26px;border-radius:30px;margin:20px 0 34px;box-shadow:0 8px 30px rgba(233,69,96,.38)}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#c62a47);color:#fff;padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:600;font-size:1rem;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(233,69,96,.32)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(233,69,96,.5)}
+.btn-secondary{background:rgba(255,255,255,.08);border:1px solid var(--border);color:var(--text);padding:14px 32px;border-radius:30px;text-decoration:none;font-weight:500;font-size:1rem;transition:background .2s;backdrop-filter:blur(8px)}
+.btn-secondary:hover{background:rgba(255,255,255,.14)}
+.scroll-hint{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);color:rgba(240,246,252,.35);font-size:.78rem;letter-spacing:2px;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+/* STATS */
+#stats{background:linear-gradient(90deg,rgba(45,106,79,.28),rgba(233,69,96,.18));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:22px}
+.stats-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;background:linear-gradient(135deg,var(--gold),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.stat-label{color:var(--muted);font-size:.82rem;margin-top:4px}
+
+/* SECTION COMMON */
+section{padding:80px 24px}
+.section-inner{max-width:1100px;margin:0 auto}
+.section-tag{display:inline-block;color:var(--green2);font-size:.78rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:700;line-height:1.2;margin-bottom:16px}
+.section-desc{color:var(--muted);font-size:.98rem;line-height:1.72;max-width:600px}
+.fade-in{opacity:0;transform:translateY(28px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* ABOUT */
+#about{background:var(--dark2)}
+.about-grid{display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:center}
+.about-photo{aspect-ratio:3/4;border-radius:20px;background:linear-gradient(135deg,#1a3a5c,#2d6a4f);display:flex;align-items:center;justify-content:center;font-size:7rem;position:relative;overflow:hidden}
+.about-quote{border-left:3px solid var(--accent);padding:16px 20px;margin:22px 0;background:rgba(233,69,96,.06);border-radius:0 12px 12px 0;font-style:italic;font-size:1.08rem;line-height:1.7;color:rgba(240,246,252,.85)}
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.perk{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;display:flex;align-items:center;gap:10px;font-size:.9rem}
+
+/* TOURS */
+#tours{background:var(--dark)}
+.tours-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:48px}
+.tour-hit{grid-column:1/-1;background:linear-gradient(135deg,#1a0a2e,#2d0a1e,#1a2744,#0d2818);border-radius:20px;overflow:hidden;border:1px solid rgba(233,69,96,.28);display:grid;grid-template-columns:1fr 1fr;min-height:280px;box-shadow:0 20px 60px rgba(0,0,0,.38);cursor:pointer;transition:transform .3s}
+.tour-hit:hover{transform:translateY(-4px)}
+.hit-visual{background:linear-gradient(135deg,rgba(233,69,96,.18),rgba(82,183,136,.18),rgba(245,166,35,.18));display:flex;align-items:center;justify-content:center;font-size:8rem}
+.hit-body{padding:40px;display:flex;flex-direction:column;justify-content:center}
+.hit-badge{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--accent));color:#fff;font-size:.73rem;font-weight:700;padding:4px 12px;border-radius:20px;width:fit-content;margin-bottom:14px;letter-spacing:1px}
+.hit-title{font-family:'Playfair Display',serif;font-size:1.75rem;font-weight:700;margin-bottom:12px}
+.hit-regions{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.region-tag{background:rgba(255,255,255,.1);border:1px solid var(--border);padding:4px 12px;border-radius:20px;font-size:.78rem;color:var(--muted)}
+.hit-highlights{list-style:none;margin:0 0 22px}
+.hit-highlights li{padding:4px 0;color:rgba(240,246,252,.8);font-size:.88rem}
+.hit-highlights li::before{content:'✦ ';color:var(--gold)}
+.tour-card{border-radius:20px;overflow:hidden;border:1px solid var(--border);background:var(--card);transition:transform .3s,box-shadow .3s,border-color .3s;cursor:pointer}
+.tour-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.38);border-color:rgba(255,255,255,.2)}
+.tour-visual{height:190px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative}
+.tour-visual-label{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);color:var(--gold);font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:8px}
+.tour-body{padding:22px}
+.tour-name{font-family:'Playfair Display',serif;font-size:1.25rem;font-weight:700;margin-bottom:10px}
+.tour-pts{list-style:none;margin-bottom:18px}
+.tour-pts li{padding:3px 0;color:var(--muted);font-size:.83rem}
+.tour-pts li::before{content:'→ ';color:var(--green2)}
+.tour-footer{display:flex;justify-content:space-between;align-items:center}
+.tour-days{background:rgba(45,106,79,.2);border:1px solid rgba(82,183,136,.3);color:var(--green2);padding:4px 12px;border-radius:20px;font-size:.78rem;font-weight:600}
+.tour-btn{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:6px 16px;border-radius:20px;font-size:.83rem;cursor:pointer;transition:background .2s;text-decoration:none;font-family:'Inter',sans-serif}
+.tour-btn:hover{background:var(--accent);color:#fff}
+.t-elbrus{background:linear-gradient(135deg,#1a1a4e,#2d1b6e)}
+.t-dombay{background:linear-gradient(135deg,#0a2e1a,#1a5c2e)}
+.t-osetia{background:linear-gradient(135deg,#2e1a0a,#5c3a1a)}
+.t-bezeng{background:linear-gradient(135deg,#0a0f2e,#1a2040)}
+.t-kbr{background:linear-gradient(135deg,#0a2a3e,#1a4a6e)}
+.t-ingush{background:linear-gradient(135deg,#2e2010,#5a3d20)}
+.t-pyat{background:linear-gradient(135deg,#0a2e0a,#205c20)}
+
+/* FOOD */
+#food{background:var(--dark2)}
+.food-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin-top:46px}
+.food-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px 18px;text-align:center;transition:transform .2s,border-color .2s}
+.food-card:hover{transform:translateY(-4px);border-color:rgba(245,166,35,.4)}
+.food-emoji{font-size:2.8rem;margin-bottom:10px}
+.food-name{font-family:'Playfair Display',serif;font-size:.98rem;font-weight:600;margin-bottom:6px}
+.food-desc{color:var(--muted);font-size:.78rem;line-height:1.5}
+.food-quote{margin:38px auto 0;text-align:center;font-size:1.05rem;font-style:italic;color:rgba(240,246,252,.7);padding:20px;border-radius:12px;background:rgba(245,166,35,.06);border:1px solid rgba(245,166,35,.14);max-width:580px}
+
+/* GEOGRAPHY */
+#geography{background:var(--dark)}
+.geo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;margin-top:46px}
+.geo-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;display:flex;gap:14px;transition:border-color .2s}
+.geo-card:hover{border-color:rgba(82,183,136,.4)}
+.geo-num{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:rgba(255,255,255,.055);min-width:44px;line-height:1}
+.geo-name{font-weight:600;font-size:.96rem;margin-bottom:5px}
+.geo-desc{color:var(--muted);font-size:.82rem;line-height:1.6}
+
+/* INCLUDED */
+#included{background:var(--dark2)}
+.included-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:46px}
+.inc-item{display:flex;align-items:flex-start;gap:12px;padding:16px;border-radius:12px;background:var(--card);border:1px solid var(--border)}
+.inc-icon{font-size:1.4rem;min-width:26px}
+.inc-text strong{display:block;margin-bottom:2px;font-size:.9rem}
+.inc-text span{color:var(--muted);font-size:.8rem}
+.inc-item.no{opacity:.5}
+
+/* REVIEWS */
+#reviews{background:var(--dark);overflow:hidden}
+.reviews-track{display:flex;gap:22px;margin-top:46px;overflow-x:auto;padding-bottom:14px;scrollbar-width:none}
+.reviews-track::-webkit-scrollbar{display:none}
+.review-card{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:26px;min-width:310px;max-width:370px;flex-shrink:0;transition:border-color .2s}
+.review-card:hover{border-color:rgba(233,69,96,.3)}
+.review-header{display:flex;align-items:center;gap:13px;margin-bottom:14px}
+.review-avatar{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.95rem;color:#fff;flex-shrink:0}
+.review-name{font-weight:600;font-size:.93rem}
+.review-city{color:var(--muted);font-size:.78rem}
+.review-stars{color:var(--gold);margin-bottom:10px;font-size:.88rem}
+.review-text{color:rgba(240,246,252,.78);font-size:.87rem;line-height:1.7;font-style:italic}
+.review-tour{margin-top:12px;color:var(--green2);font-size:.78rem;font-weight:500}
+
+/* BLOG */
+#blog{background:var(--dark2)}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:46px}
+.blog-card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;transition:transform .2s;text-decoration:none;color:var(--text)}
+.blog-card:hover{transform:translateY(-4px)}
+.blog-visual{height:175px;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative}
+.blog-date{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);color:var(--muted);font-size:.72rem;padding:3px 9px;border-radius:7px}
+.blog-body{padding:18px}
+.blog-title{font-weight:600;font-size:.97rem;margin-bottom:7px;line-height:1.4}
+.blog-excerpt{color:var(--muted);font-size:.82rem;line-height:1.6;font-style:italic}
+.blog-cta{margin-top:36px;text-align:center;padding:30px;border-radius:16px;background:linear-gradient(135deg,rgba(45,106,79,.18),rgba(82,183,136,.08));border:1px solid rgba(82,183,136,.2)}
+.blog-cta p{color:var(--muted);margin-bottom:14px}
+
+/* FAQ */
+#faq{background:var(--dark)}
+.faq-list{max-width:700px;margin:46px auto 0;display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.faq-q{width:100%;background:none;border:none;color:var(--text);padding:18px 22px;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.93rem;font-weight:500;font-family:'Inter',sans-serif;transition:background .2s}
+.faq-q:hover{background:rgba(255,255,255,.04)}
+.faq-arrow{font-size:1.1rem;transition:transform .3s;color:var(--muted)}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease;color:var(--muted);font-size:.88rem;line-height:1.7;padding:0 22px}
+.faq-item.open .faq-a{max-height:200px;padding:0 22px 18px}
+
+/* CTA */
+#cta{background:linear-gradient(135deg,#1a0a2e,#2d1b00,#0d2818);padding:100px 24px;text-align:center;position:relative;overflow:hidden}
+#cta::before{content:'🏔️';position:absolute;font-size:20rem;opacity:.03;top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-inner{max-width:580px;margin:0 auto;position:relative}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.5rem);font-weight:900;margin-bottom:14px}
+.cta-sub{color:rgba(240,246,252,.62);font-size:1.08rem;line-height:1.7;margin-bottom:30px}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-price{margin-top:22px;color:rgba(240,246,252,.45);font-size:.87rem}
+
+/* FOOTER */
+footer{background:var(--dark2);border-top:1px solid var(--border);padding:36px 24px}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:22px}
+.footer-links{display:flex;gap:20px;flex-wrap:wrap}
+.footer-links a{color:var(--muted);text-decoration:none;font-size:.88rem;display:flex;align-items:center;gap:5px;transition:color .2s}
+.footer-links a:hover{color:var(--text)}
+.footer-copy{color:rgba(139,148,158,.45);font-size:.78rem}
+
+/* MODAL */
+.modal-overlay{display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.8);backdrop-filter:blur(6px);align-items:center;justify-content:center;padding:24px}
+.modal-overlay.open{display:flex}
+.modal{background:#161b22;border:1px solid var(--border);border-radius:20px;max-width:520px;width:100%;padding:38px;position:relative;max-height:90vh;overflow-y:auto}
+.modal-close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:1.5rem;cursor:pointer;line-height:1}
+.modal-close:hover{color:var(--text)}
+.modal-emoji{font-size:3.8rem;margin-bottom:14px;display:block}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin-bottom:14px}
+.modal-desc{color:var(--muted);line-height:1.7;margin-bottom:18px;font-size:.93rem}
+.modal-days{display:flex;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.modal-day-tag{background:rgba(45,106,79,.2);border:1px solid rgba(82,183,136,.3);color:var(--green2);padding:5px 13px;border-radius:20px;font-size:.82rem}
+.modal-price{font-size:1.4rem;font-weight:700;color:var(--accent);margin-bottom:22px}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{display:none}
+  .burger{display:block}
+  nav.open{display:flex;flex-direction:column;position:fixed;inset:0;top:58px;background:var(--dark2);padding:30px 24px;z-index:99;gap:18px}
+  nav.open a{font-size:1.1rem}
+  .about-grid{grid-template-columns:1fr}
+  .about-photo{aspect-ratio:16/9}
+  .perks{grid-template-columns:1fr}
+  .tour-hit{grid-template-columns:1fr}
+  .hit-visual{height:180px}
+  .hit-body{padding:22px}
+  .included-grid{grid-template-columns:1fr}
+  .footer-inner{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a href="#" class="logo">🏔 Кавказ с Людмилой</a>
+  <nav id="nav">
+    <a href="#tours">Туры</a>
+    <a href="#food">Кухня</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#blog">Блог</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://t.me/Ludmila_Bas" target="_blank" class="nav-cta">Забронировать</a>
+  </nav>
+  <button class="burger" id="burger">☰</button>
+</header>
+
+<section id="hero">
+  <div class="hero-content fade-in">
+    <div class="hero-badge">✦ Авторские туры на Кавказ</div>
+    <h1 class="hero-title">Горы, которые<br>меняют тебя</h1>
+    <p class="hero-sub">7 дней среди Эльбруса, башен Ингушетии,<br>ущелий Осетии и вкуса настоящих хычинов</p>
+    <div class="price-badge">фиксированная цена — 39 000 ₽ за 7 дней</div>
+    <div class="hero-btns">
+      <a href="#tours" class="btn-primary">Выбрать тур</a>
+      <a href="https://t.me/Ludmila_Bas" target="_blank" class="btn-secondary">✈ Написать Людмиле</a>
+    </div>
+  </div>
+  <svg class="hero-mountains" viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,70 L120,35 L240,60 L360,15 L480,55 L600,8 L720,45 L840,22 L960,50 L1080,12 L1200,42 L1320,28 L1440,45 L1440,100 L0,100 Z" fill="#0d1117" opacity=".7"/>
+    <path d="M0,88 L180,55 L360,78 L540,45 L720,68 L900,40 L1080,64 L1260,50 L1440,72 L1440,100 L0,100 Z" fill="#0d1117"/>
+  </svg>
+  <div class="scroll-hint">↓ &nbsp; SCROLL</div>
+</section>
+
+<div id="stats">
+  <div class="stats-grid fade-in">
+    <div><div class="stat-num">8+</div><div class="stat-label">авторских маршрутов</div></div>
+    <div><div class="stat-num">7</div><div class="stat-label">дней / 6 ночей</div></div>
+    <div><div class="stat-num">39К</div><div class="stat-label">₽ — фиксированная цена</div></div>
+    <div><div class="stat-num">Sold Out</div><div class="stat-label">апрель 2025</div></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="section-inner about-grid fade-in">
+    <div class="about-photo">🧗‍♀️</div>
+    <div>
+      <div class="section-tag">О проекте</div>
+      <h2 class="section-title">Не просто тур —<br>состояние души</h2>
+      <div class="about-quote">«Меня зовут Людмила. Я сама езжу с каждой группой, выбираю маршруты сердцем и знаю: Кавказ нельзя увидеть — его можно только почувствовать. Горы здесь шепчут нежность, а душа находит то, чего ей так давно не хватало.»</div>
+      <p class="section-desc">Авторские туры — это не шаблонный пакет. Каждый маршрут прожит лично, каждое место выбрано с любовью. Малые группы, живое общение, подлинная атмосфера.</p>
+      <div class="perks">
+        <div class="perk">✍️ &nbsp; Авторский маршрут</div>
+        <div class="perk">👥 &nbsp; Малая группа</div>
+        <div class="perk">✅ &nbsp; Всё включено</div>
+        <div class="perk">💰 &nbsp; Фиксированная цена</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tours">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-tag">Маршруты</div>
+      <h2 class="section-title">Выбери своё приключение</h2>
+    </div>
+    <div class="tours-grid">
+
+      <div class="tour-hit fade-in" onclick="openModal('hit')">
+        <div class="hit-visual">🗺️</div>
+        <div class="hit-body">
+          <div class="hit-badge">🔥 ХИТ СЕЗОНА</div>
+          <div class="hit-title">3 республики + Эльбрус</div>
+          <div class="hit-regions">
+            <span class="region-tag">Осетия</span><span class="region-tag">Ингушетия</span><span class="region-tag">Чечня</span><span class="region-tag">КБР</span>
+          </div>
+          <ul class="hit-highlights">
+            <li>Величественный Эльбрус — вершина Кавказа</li>
+            <li>Башенные комплексы горной Ингушетии</li>
+            <li>Даргавс — мистический «Город Мёртвых»</li>
+            <li>Грозный — сердце современной Чечни</li>
+            <li>Осетинские пироги у бабушки в горах</li>
+          </ul>
+          <a href="https://t.me/Ludmila_Bas" target="_blank" class="btn-primary" style="width:fit-content" onclick="event.stopPropagation()">Хочу этот тур →</a>
+        </div>
+      </div>
+
+      <div class="tour-card fade-in" onclick="openModal('elbrus')">
+        <div class="tour-visual t-elbrus">⛰️<span class="tour-visual-label">КБР</span></div>
+        <div class="tour-body">
+          <div class="tour-name">Эльбрус</div>
+          <ul class="tour-pts"><li>Подъём на 3500 м на канатке</li><li>Ледники и вечные снега</li><li>Рассвет над хребтом</li><li>Поляна Нарзанов</li></ul>
+          <div class="tour-footer"><span class="tour-days">7 дней</span><span class="tour-btn">Подробнее</span></div>
+        </div>
+      </div>
+
+      <div class="tour-card fade-in" onclick="openModal('dombay')">
+        <div class="tour-visual t-dombay">🌿<span class="tour-visual-label">КЧР</span></div>
+        <div class="tour-body">
+          <div class="tour-name">Домбай</div>
+          <ul class="tour-pts"><li>Альпийские луга в цветах</li><li>Горные реки и водопады</li><li>Туманы и нежные вершины</li><li>Ущелье Аманауз</li></ul>
+          <div class="tour-footer"><span class="tour-days">7 дней</span><span class="tour-btn">Подробнее</span></div>
+        </div>
+      </div>
+
+      <div class="tour-card fade-in" onclick="openModal('osetia')">
+        <div class="tour-visual t-osetia">🏛️<span class="tour-visual-label">Осетия</span></div>
+        <div class="tour-body">
+          <div class="tour-name">Северная Осетия</div>
+          <ul class="tour-pts"><li>Даргавс — «Город Мёртвых»</li><li>Кармадонское ущелье</li><li>Осетинские пироги с пылу с жару</li><li>Ослики на фоне гор 🫏</li></ul>
+          <div class="tour-footer"><span class="tour-days">7 дней</span><span class="tour-btn">Подробнее</span></div>
+        </div>
+      </div>
+
+      <div class="tour-card fade-in" onclick="openModal('bezeng')">
+        <div class="tour-visual t-bezeng">🪨<span class="tour-visual-label">КБР</span></div>
+        <div class="tour-body">
+          <div class="tour-name">Безенги</div>
+          <ul class="tour-pts"><li>Безенгийская стена — стена великанов</li><li>Язык Тролля — эпичные фото</li><li>Дикая нетронутая природа</li><li>Первобытная мощь</li></ul>
+          <div class="tour-footer"><span class="tour-days">7 дней</span><span class="tour-btn">Подробнее</span></div>
+        </div>
+      </div>
+
+      <div class="tour-card fade-in" onclick="openModal('kbr')">
+        <div class="tour-visual t-kbr">💎<span class="tour-visual-label">КБР</span></div>
+        <div class="tour-body">
+          <div class="tour-name">Кабардино-Балкария</div>
+          <ul class="tour-pts"><li>Голубые озёра — бриллианты Кавказа</li><li>Черекская теснина</li><li>Чёрное озеро — место силы</li><li>Озёра Шадхурей</li></ul>
+          <div class="tour-footer"><span class="tour-days">7 дней</span><span class="tour-btn">Подробнее</span></div>
+        </div>
+      </div>
+
+      <div class="tour-card fade-in" onclick="openModal('ingush')">
+        <div class="tour-visual t-ingush">🗼<span class="tour-visual-label">Ингушетия</span></div>
+        <div class="tour-body">
+          <div class="tour-name">Горная Ингушетия</div>
+          <ul class="tour-pts"><li>Башни без единого гвоздя</li><li>Горные пещеры и ущелья</li><li>Кристальные реки</li><li>Легенды «Страны Башен»</li></ul>
+          <div class="tour-footer"><span class="tour-days">7 дней</span><span class="tour-btn">Подробнее</span></div>
+        </div>
+      </div>
+
+      <div class="tour-card fade-in" onclick="openModal('pyat')">
+        <div class="tour-visual t-pyat">🌸<span class="tour-visual-label">Ставрополье</span></div>
+        <div class="tour-body">
+          <div class="tour-name">Пятигорск</div>
+          <ul class="tour-pts"><li>Гора Кольцо — природный памятник</li><li>Медовые водопады и хычины</li><li>Небесные качели + зиплайн</li><li>Уютный чайный домик</li></ul>
+          <div class="tour-footer"><span class="tour-days">7 дней</span><span class="tour-btn">Подробнее</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="food">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-tag">Кухня Кавказа</div>
+      <h2 class="section-title">Вкус — это тоже<br>часть путешествия</h2>
+      <p class="section-desc">Горячие хычины, пироги с пылу с жару, чай из горных трав — это не «поесть», это ритуал.</p>
+    </div>
+    <div class="food-grid">
+      <div class="food-card fade-in"><div class="food-emoji">🫓</div><div class="food-name">Хычины</div><div class="food-desc">Тонкие лепёшки с сыром и картофелем. У Медовых водопадов — особенно вкусные</div></div>
+      <div class="food-card fade-in"><div class="food-emoji">🥧</div><div class="food-name">Осетинские пироги</div><div class="food-desc">3 пирога — символ гостеприимства. С сыром, мясом, картофелем — у бабушки в горах</div></div>
+      <div class="food-card fade-in"><div class="food-emoji">🔥</div><div class="food-name">Шашлык в горах</div><div class="food-desc">На углях, с горным воздухом и видом на хребет — вкус, который запомнишь навсегда</div></div>
+      <div class="food-card fade-in"><div class="food-emoji">🍵</div><div class="food-name">Горный чай</div><div class="food-desc">Сбор горных трав, с мёдом и чабрецом. В чайном домике после зиплайна</div></div>
+      <div class="food-card fade-in"><div class="food-emoji">🍇</div><div class="food-name">Чурчхела</div><div class="food-desc">Орехи в виноградном соке. Традиционный кавказский деликатес с рынков</div></div>
+      <div class="food-card fade-in"><div class="food-emoji">🥛</div><div class="food-name">Айран</div><div class="food-desc">Свежий айран от местных пастухов. Лучший напиток после горного перехода</div></div>
+    </div>
+    <div class="food-quote fade-in">😋 «Медовые водопады, хычины с пылу с жару — это тоже часть маршрута. Кавказ кормит душу и тело»</div>
+  </div>
+</section>
+
+<section id="geography">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-tag">География</div>
+      <h2 class="section-title">7 регионов. Один Кавказ.</h2>
+      <p class="section-desc">От Пятигорска до Грозного, от Домбая до Безенги — каждое место уникально.</p>
+    </div>
+    <div class="geo-grid fade-in">
+      <div class="geo-card"><div class="geo-num">01</div><div><div class="geo-name">🏔 Кабардино-Балкария</div><div class="geo-desc">Эльбрус, Безенги, Голубые озёра, Черекская теснина. Сердце горного Кавказа.</div></div></div>
+      <div class="geo-card"><div class="geo-num">02</div><div><div class="geo-name">🏛 Северная Осетия</div><div class="geo-desc">Мистический Даргавс, Кармадонское ущелье, гостеприимство и пироги.</div></div></div>
+      <div class="geo-card"><div class="geo-num">03</div><div><div class="geo-name">🗼 Горная Ингушетия</div><div class="geo-desc">Башенные комплексы без единого гвоздя. «Страна Башен и Гор» — это не метафора.</div></div></div>
+      <div class="geo-card"><div class="geo-num">04</div><div><div class="geo-name">🌙 Чечня</div><div class="geo-desc">Современный Грозный, уникальная культура и незабываемое гостеприимство.</div></div></div>
+      <div class="geo-card"><div class="geo-num">05</div><div><div class="geo-name">🌿 Карачаево-Черкесия</div><div class="geo-desc">Домбай — горная сказка. Альпийские луга, нежные вершины, умиротворение.</div></div></div>
+      <div class="geo-card"><div class="geo-num">06</div><div><div class="geo-name">🌸 Пятигорск</div><div class="geo-desc">Гора Кольцо, Медовые водопады, Небесные качели и лермонтовский дух.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="included">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;max-width:580px;margin:0 auto 46px">
+      <div class="section-tag">Что включено</div>
+      <h2 class="section-title">Приедь и наслаждайся.<br>Мы обо всём позаботились.</h2>
+    </div>
+    <div class="included-grid fade-in">
+      <div class="inc-item"><span class="inc-icon">🚐</span><div class="inc-text"><strong>Трансфер по маршруту</strong><span>Встреча в аэропорту, все переезды включены</span></div></div>
+      <div class="inc-item"><span class="inc-icon">🏡</span><div class="inc-text"><strong>Проживание</strong><span>Уютные гостевые дома, комнаты с характером</span></div></div>
+      <div class="inc-item"><span class="inc-icon">🍽️</span><div class="inc-text"><strong>Завтраки и ужины</strong><span>Домашняя кавказская кухня каждый день</span></div></div>
+      <div class="inc-item"><span class="inc-icon">🎟️</span><div class="inc-text"><strong>Все экскурсии</strong><span>Входные билеты, подъёмники, гиды</span></div></div>
+      <div class="inc-item"><span class="inc-icon">👩‍🦰</span><div class="inc-text"><strong>Людмила с вами</strong><span>Авторское сопровождение на каждом шагу</span></div></div>
+      <div class="inc-item"><span class="inc-icon">📸</span><div class="inc-text"><strong>Фото и видео</strong><span>Съёмка лучших моментов в подарок</span></div></div>
+      <div class="inc-item no"><span class="inc-icon">✈️</span><div class="inc-text"><strong>Авиабилеты</strong><span>Прилет в Минводы или Нальчик — самостоятельно</span></div></div>
+      <div class="inc-item no"><span class="inc-icon">🍴</span><div class="inc-text"><strong>Обеды</strong><span>По желанию — выбираете сами из местных кафе</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-tag">Отзывы</div>
+      <h2 class="section-title">Что говорят путешественники</h2>
+    </div>
+    <div class="reviews-track">
+      <div class="review-card fade-in">
+        <div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#e94560,#c62a47)">МС</div><div><div class="review-name">Марина С.</div><div class="review-city">Москва</div></div></div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Приехала скептиком — уехала влюблённой. Людмила знает Кавказ как свои пять пальцев. Эльбрус, пироги, башни — за 7 дней объехали больше, чем я планировала за месяц.»</div>
+        <div class="review-tour">✦ 3 республики + Эльбрус</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#2d6a4f,#52b788)">АК</div><div><div class="review-name">Алексей К.</div><div class="review-city">Екатеринбург</div></div></div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Язык Тролля в Безенги — это нечто. Стоишь на скале, а за спиной такая стена — фото взрывают инстаграм. Тур окупился сторицей, да и компания замечательная.»</div>
+        <div class="review-tour">✦ Безенги</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#f5a623,#e94560)">ОД</div><div><div class="review-name">Ольга и Дмитрий</div><div class="review-city">Санкт-Петербург</div></div></div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Ехали вдвоём, познакомились с удивительными людьми из группы — теперь дружим. Осетинские пироги у бабушки в горах — это не забудем никогда.»</div>
+        <div class="review-tour">✦ Северная Осетия</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#1a3a5c,#2d6a4f)">НВ</div><div><div class="review-name">Наталья В.</div><div class="review-city">Новосибирск</div></div></div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Апрель был уже занят — взяла май. Не пожалела ни секунды. Голубые озёра, Черекская теснина, Чёрное озеро — это уровень! Обязательно вернусь.»</div>
+        <div class="review-tour">✦ Кабардино-Балкария</div>
+      </div>
+      <div class="review-card fade-in">
+        <div class="review-header"><div class="review-avatar" style="background:linear-gradient(135deg,#5c3a1a,#2d1b00)">ТМ</div><div><div class="review-name">Татьяна М.</div><div class="review-city">Казань</div></div></div>
+        <div class="review-stars">★★★★★</div>
+        <div class="review-text">«Домбай — это как обнять горы. Людмила права: он нежен и красив. Альпийские луга в июне — фантастика. Кавказ навсегда останется в сердце.»</div>
+        <div class="review-tour">✦ Домбай</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-tag">Живой дневник</div>
+      <h2 class="section-title">Блог из сердца Кавказа</h2>
+      <p class="section-desc">Людмила пишет о местах, снимает видео и делится стихами прямо с маршрутов.</p>
+    </div>
+    <div class="blog-grid">
+      <a href="https://t.me/CaucasusTours73" target="_blank" class="blog-card fade-in">
+        <div class="blog-visual t-bezeng">🪨<span class="blog-date">9 фев 2025</span></div>
+        <div class="blog-body"><div class="blog-title">Язык Тролля в Безенги — наш лучше норвежского</div><div class="blog-excerpt">«Наш безенгийский Язык Тролля более колоритен, более дик и первобытен...»</div></div>
+      </a>
+      <a href="https://t.me/CaucasusTours73" target="_blank" class="blog-card fade-in">
+        <div class="blog-visual t-elbrus">⛰️<span class="blog-date">3 фев 2025</span></div>
+        <div class="blog-body"><div class="blog-title">Эльбрус — это целая вселенная</div><div class="blog-excerpt">«Каждый вдох наполняет энергией. Даже просто после прогулки чувствуешь себя обновлённым...»</div></div>
+      </a>
+      <a href="https://t.me/CaucasusTours73" target="_blank" class="blog-card fade-in">
+        <div class="blog-visual t-osetia">🏛️<span class="blog-date">26 янв 2025</span></div>
+        <div class="blog-body"><div class="blog-title">Осетия — мир из бархатных гор и древних традиций</div><div class="blog-excerpt">«Только в Осетии душа наполняется спокойствием и благоговением...»</div></div>
+      </a>
+    </div>
+    <div class="blog-cta fade-in">
+      <p>Видео с маршрутов, стихи Людмилы, анонсы туров — всё в Telegram-канале</p>
+      <a href="https://t.me/CaucasusTours73" target="_blank" class="btn-primary">📲 Подписаться на канал</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;max-width:580px;margin:0 auto">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Часто задают</h2>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Что включено в цену 39 000 ₽? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Трансфер по всему маршруту, проживание в уютных гостевых домах, завтраки и ужины, все экскурсии и входные билеты, авторское сопровождение Людмилы и фото/видео на память. Авиабилеты и обеды — самостоятельно.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Как добраться до начала тура? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Перелёт в Минеральные Воды (МВЛ) или Нальчик — в зависимости от маршрута. Людмила встретит в аэропорту — дальнейшие переезды включены в стоимость.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Нужна ли физическая подготовка? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Средняя. Это не альпинизм — туры рассчитаны на обычных путешественников. Нужно уметь ходить пешком 3–5 часов. Специальные навыки и снаряжение не нужны.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Группы большие? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Нет. Авторские малые группы — главный принцип. Людмила знает каждого участника по имени. Это не автобусный тур с флажком.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Когда ближайший тур? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Расписание формируется постоянно. Апрель 2025 уже был sold out — лучше не тянуть. Напишите Людмиле в Telegram @Ludmila_Bas.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Можно ехать с детьми? <span class="faq-arrow">▾</span></button>
+        <div class="faq-a">Да, с детьми от 10 лет при наличии взрослого. Уточните конкретный маршрут у Людмилы.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="cta-inner fade-in">
+    <div class="section-tag" style="display:block;text-align:center;margin:0 auto 14px">Бронирование</div>
+    <h2 class="cta-title">Готов к<br>путешествию?</h2>
+    <p class="cta-sub">Напиши Людмиле в Telegram — и уже через 5 минут узнаешь, когда ближайший тур и есть ли свободные места.</p>
+    <div class="cta-btns">
+      <a href="https://t.me/Ludmila_Bas" target="_blank" class="btn-primary" style="font-size:1.1rem;padding:16px 36px">✈ Написать в Telegram</a>
+      <a href="https://t.me/CaucasusTours73" target="_blank" class="btn-secondary">📲 Смотреть канал</a>
+    </div>
+    <p class="cta-price">39 000 ₽ за 7 незабываемых дней · Цена фиксирована на все маршруты</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <a href="#" class="logo">🏔 Кавказ с Людмилой</a>
+    <div class="footer-links">
+      <a href="https://t.me/CaucasusTours73" target="_blank">📢 Telegram-канал</a>
+      <a href="https://t.me/Ludmila_Bas" target="_blank">💬 Написать Людмиле</a>
+      <a href="https://www.instagram.com/ludmila_basyrova/" target="_blank">📸 Instagram</a>
+    </div>
+    <div class="footer-copy">Авторские туры на Кавказ © 2025</div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <span class="modal-emoji" id="m-emoji"></span>
+    <div class="modal-title" id="m-title"></div>
+    <div class="modal-desc" id="m-desc"></div>
+    <div class="modal-days" id="m-days"></div>
+    <div class="modal-price">39 000 ₽ / 7 дней</div>
+    <a href="https://t.me/Ludmila_Bas" target="_blank" class="btn-primary" style="width:100%;text-align:center;display:block">Хочу этот тур →</a>
+  </div>
+</div>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('header').classList.toggle('scrolled',scrollY>60));
+document.getElementById('burger').addEventListener('click',function(){
+  const n=document.getElementById('nav');
+  n.classList.toggle('open');
+  this.textContent=n.classList.contains('open')?'✕':'☰';
+});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});
+document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+function toggleFaq(btn){
+  const item=btn.parentElement,isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+const tours={
+  hit:{emoji:'🗺️',title:'3 республики + Эльбрус',days:['Осетия','Ингушетия','Чечня','КБР'],desc:'Флагманский маршрут — за 7 дней сразу четыре республики. Величественный Эльбрус, башенные комплексы Ингушетии, мистический Даргавс в Осетии и современный Грозный. Финал — подъём на Эльбрус с захватывающими видами на Кавказский хребет.'},
+  elbrus:{emoji:'⛰️',title:'Эльбрус',days:['КБР','Приэльбрусье','Терскол'],desc:'Подъём на Эльбрус на канатной дороге до 3500 м. Ледники, вечные снега, невероятные рассветы. Поляна Нарзанов с минеральными источниками. Место, где чувствуешь себя на вершине мира.'},
+  dombay:{emoji:'🌿',title:'Домбай',days:['КЧР','Домбай','Аманауз'],desc:'Домбай — горная сказка Карачаево-Черкесии. Альпийские луга в сотнях цветов, нежные вершины, туманы. «Домбай как будто обнимает тебя своей красотой» — говорит Людмила. И это правда.'},
+  osetia:{emoji:'🏛️',title:'Северная Осетия',days:['Владикавказ','Кармадон','Даргавс'],desc:'Осетия — мир, сотканный из бархатных гор и древних традиций. Даргавс — «Город Мёртвых», Кармадонское ущелье, осетинские пироги у бабушки в горах. И милые ослики на фоне снежных вершин.'},
+  bezeng:{emoji:'🪨',title:'Безенги',days:['Безенгийское ущелье','Язык Тролля'],desc:'Безенгийская стена — один из самых впечатляющих горных массивов России. Язык Тролля здесь мощнее и первобытнее норвежского. Фотографии отсюда собирают тысячи лайков. Место для тех, кто ищет дикую природу.'},
+  kbr:{emoji:'💎',title:'Кабардино-Балкария',days:['Голубые озёра','Черек','Шадхурей'],desc:'Голубые озёра меняют цвет как живые — от бирюзового до сапфирового. Черекская теснина — ущелье, где скалы уходят в небо. Чёрное озеро хранит легенды о затопленном городе. Красота и тайна в одном туре.'},
+  ingush:{emoji:'🗼',title:'Горная Ингушетия',days:['Магас','Башни','Пещеры'],desc:'«Страна Башен и Гор» — не метафора. Башни строились без единого гвоздя и стоят веками. Горные реки, пещеры, легенды. Место, где можно почувствовать дыхание истории.'},
+  pyat:{emoji:'🌸',title:'Пятигорск',days:['Гора Кольцо','Медовые водопады','Зиплайн'],desc:'Один из самых насыщенных дней тура: Гора Кольцо — природный памятник, Медовые водопады с хычинами, Небесные качели с зиплайном — адреналин и красота. Финал — чайный домик с горными травами.'}
+};
+function openModal(key){
+  const t=tours[key];
+  document.getElementById('m-emoji').textContent=t.emoji;
+  document.getElementById('m-title').textContent=t.title;
+  document.getElementById('m-desc').textContent=t.desc;
+  document.getElementById('m-days').innerHTML=t.days.map(d=>`<span class="modal-day-tag">${d}</span>`).join('');
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body>
+</html>
