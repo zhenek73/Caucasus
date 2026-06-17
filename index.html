@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авторские туры на Кавказ — Людмила Басырова</title>
+<meta name="description" content="Авторские туры на Кавказ с Людмилой Басыровой. Эльбрус, Домбай, Осетия, Ингушетия. 7 дней — 39 000 ₽. Не просто тур — состояние души.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="brand" href="#hero" aria-label="На главную">
+      <span class="mark">К</span>
+      <span class="bname">
+        <b>Кавказ</b>
+        <span>Авторские туры</span>
+      </span>
+    </a>
+    <nav class="nav">
+      <a href="#tours">Туры</a>
+      <a href="#elbrus">Эльбрус</a>
+      <a href="#cuisine">Кухня</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#faq">Вопросы</a>
+      <a class="nav-cta" href="#book">Забронировать</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mnav" id="mnav">
+  <button class="close" id="mnavClose" aria-label="Закрыть">×</button>
+  <a href="#tours">Туры</a>
+  <a href="#elbrus">Эльбрус</a>
+  <a href="#cuisine">Кухня</a>
+  <a href="#geo">География</a>
+  <a href="#reviews">Отзывы</a>
+  <a href="#faq">Вопросы</a>
+  <a href="#book">Забронировать</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"><img src="images/elbrus-peak.png" alt="Заснеженная вершина Эльбруса под чистым небом"></div>
+  <div class="wrap hero-inner">
+    <p class="motto">Счастье не за горами — оно в горах</p>
+    <h1>Авторские туры <em>на Кавказ</em></h1>
+    <p class="sub">7 дней, которые меняют тебя навсегда. Маршруты, выбранные сердцем — и пройденные вместе.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#tours">Посмотреть туры</a>
+      <button class="btn btn-play-hero" id="heroPlay"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg>Видео с маршрута</button>
+      <a class="btn btn-ghost-light" href="https://t.me/Ludmila_Bas" target="_blank" rel="noopener">Написать в Telegram</a>
+      <span class="price-pill"><b>39 000 ₽</b><span>за 7 дней · всё включено</span></span>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>листай</span><span class="line"></span></div>
+</section>
+
+<!-- ============ FIGURES + REEL ============ -->
+<section class="figures" id="figures" aria-label="Кавказ в цифрах">
+  <div class="wrap fig-wrap">
+
+    <!-- vertical ambient clip from the trails -->
+    <figure class="fig-reel reveal">
+      <video class="reel-vid" id="reelVid" muted loop playsinline preload="none" poster="images/elbrus-peak.png" aria-label="Видео с маршрута"></video>
+      <div class="reel-grain"></div>
+      <div class="reel-overlay"></div>
+      <button class="reel-play-btn" id="reelPlay" aria-label="Смотреть видео"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><polygon points="5,3 19,12 5,21"/></svg></button>
+      <figcaption class="reel-cap"><span class="reel-dot"></span><span>живые кадры с маршрута</span></figcaption>
+      <span class="reel-corner">02 / Кавказ</span>
+    </figure>
+
+    <div class="fig-body">
+      <div class="fig-head reveal">
+        <span class="eyebrow on-dark">Что говорят цифры</span>
+        <h2 class="fig-title">Неделя, которая <span class="serif-it">меняет всё</span></h2>
+      </div>
+      <div class="fig-grid">
+        <div class="fig reveal">
+          <span class="fig-idx">01</span>
+          <b class="fig-n">8<span class="u">+</span></b>
+          <span class="fig-l">авторских маршрутов по&nbsp;Кавказу</span>
+        </div>
+        <div class="fig reveal">
+          <span class="fig-idx">02</span>
+          <b class="fig-n">7<span class="u">/6</span></b>
+          <span class="fig-l">дней и ночей в&nbsp;каждом туре</span>
+        </div>
+        <div class="fig price reveal">
+          <span class="fig-idx">03</span>
+          <b class="fig-n">39<span class="u">т₽</span></b>
+          <span class="fig-l">фиксированная цена на&nbsp;все туры</span>
+        </div>
+        <div class="fig reveal">
+          <span class="fig-idx">04</span>
+          <b class="fig-n">100<span class="u">%</span></b>
+          <span class="fig-l">апрель раскуплен — спрос высокий</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal">
+      <div class="frame"><img src="images/group-elbrus.png" alt="Группа Людмилы на фоне Эльбруса"></div>
+      <div class="tag">
+        <b>Людмила Басырова</b>
+        <span>автор и проводник каждого тура</span>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">О нас</span>
+      <h2>Не просто тур — <span class="serif-it">состояние души</span></h2>
+      <p>Меня зовут Людмила. Я сама езжу с каждой группой, выбираю маршруты сердцем и знаю: Кавказ нельзя увидеть — его можно только почувствовать.</p>
+      <p>Горы здесь шепчут нежность, а душа находит то, чего ей так давно не хватало. Я собираю небольшие группы, чтобы у каждого было своё утро в облаках, своя тропа и свой кадр на память.</p>
+      <p class="signature">— до встречи в горах, Людмила</p>
+      <div class="feats">
+        <div class="feat">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><b>Авторский маршрут</b><span>продуман до мелочей, без турпотока</span></div>
+        </div>
+        <div class="feat">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><circle cx="16" cy="9" r="2.4"/><path d="M3 19c0-3 2.5-5 6-5s6 2 6 5M15 14c2.6.2 5 1.9 5 5"/></svg>
+          <div><b>Малая группа</b><span>персональное внимание каждому</span></div>
+        </div>
+        <div class="feat">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17l6-9 4 5 3-4 5 8z"/><circle cx="7" cy="6" r="2"/></svg>
+          <div><b>Всё включено</b><span>трансфер, жильё, еда, экскурсии</span></div>
+        </div>
+        <div class="feat">
+          <svg class="fic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v20M7 5h8a3 3 0 0 1 0 6H7a3 3 0 0 0 0 6h9"/></svg>
+          <div><b>Фиксированная цена</b><span>39 000 ₽ — без доплат и сюрпризов</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOURS ============ -->
+<section class="section tours" id="tours">
+  <div class="wrap">
+    <div class="tours-head reveal">
+      <div>
+        <span class="eyebrow">Маршруты</span>
+        <h2 class="h2" style="margin-top:.3em">Восемь дорог <span class="serif-it">в одни горы</span></h2>
+      </div>
+      <p class="lead">Каждый тур — 7 дней, 6 ночей и единая цена 39 000 ₽. Выбирай по настроению: вершины, ущелья, башни или озёра.</p>
+    </div>
+
+    <div class="tours-grid">
+      <!-- FLAGSHIP -->
+      <article class="tcard flag reveal">
+        <span class="badge-hit">Хит</span>
+        <div class="media">
+          <div class="ph"><span class="ph-lbl">фото: панорама «3 республик» —<br>Эльбрус · Башни Ингушетии · Грозный-Сити</span></div>
+        </div>
+        <div class="body">
+          <span class="region" style="position:static;align-self:flex-start;margin-bottom:14px">Флагманский тур</span>
+          <h3>3 республики <span class="serif-it">+ Эльбрус</span></h3>
+          <p class="tagline">Осетия, Ингушетия, Чечня и Кабардино-Балкария — весь Кавказ за одну неделю.</p>
+          <ul class="pts">
+            <li>Подножие Эльбруса и поляна Азау</li>
+            <li>Древние башни горной Ингушетии</li>
+            <li>Вечерний Грозный-Сити</li>
+            <li>Осетинские пироги у бабушки в горах</li>
+          </ul>
+          <div class="foot">
+            <div class="foot-actions">
+              <span class="flag-price">39 000 ₽ <small>/ 7 дней</small></span>
+              <a class="btn btn-forest" href="#book">Забронировать</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Эльбрус -->
+      <article class="tcard reveal">
+        <div class="media">
+          <span class="region">Кабардино-Балкария</span>
+          <img src="images/elbrus-peak.png" alt="Эльбрус">
+        </div>
+        <div class="body">
+          <h3>Эльбрус</h3>
+          <ul class="pts">
+            <li>Высшая точка Европы — 5642 м</li>
+            <li>Ледники и канатная дорога</li>
+            <li>Рассветы выше облаков</li>
+          </ul>
+          <div class="foot"><span class="days">7 дней · 39 000 ₽</span><a class="more" href="#book">Подробнее <span class="ar">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- Домбай -->
+      <article class="tcard reveal">
+        <div class="media">
+          <span class="region">Карачаево-Черкесия</span>
+          <img src="images/dombai.png" alt="Домбай">
+        </div>
+        <div class="body">
+          <h3>Домбай</h3>
+          <ul class="pts">
+            <li>Альпийские луга и горная сказка</li>
+            <li>Канатка к снежным пикам</li>
+            <li>Воздух, в который влюбляешься</li>
+          </ul>
+          <div class="foot"><span class="days">7 дней · 39 000 ₽</span><a class="more" href="#book">Подробнее <span class="ar">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- Осетия -->
+      <article class="tcard reveal">
+        <div class="media">
+          <span class="region">Северная Осетия</span>
+          <div class="ph"><span class="ph-lbl">фото: Даргавс —<br>«Город мёртвых»</span></div>
+        </div>
+        <div class="body">
+          <h3>Осетия</h3>
+          <ul class="pts">
+            <li>Кармадонское ущелье</li>
+            <li>Даргавс — «Город мёртвых»</li>
+            <li>Осетинские пироги и горные ослики</li>
+          </ul>
+          <div class="foot"><span class="days">7 дней · 39 000 ₽</span><a class="more" href="#book">Подробнее <span class="ar">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- Безенги -->
+      <article class="tcard reveal">
+        <div class="media">
+          <span class="region">Кабардино-Балкария</span>
+          <div class="ph"><span class="ph-lbl">фото: Язык Тролля<br>над пропастью</span></div>
+        </div>
+        <div class="body">
+          <h3>Безенги</h3>
+          <ul class="pts">
+            <li>Безенгийская стена — суровая мощь</li>
+            <li>Язык Тролля и эпичные кадры</li>
+            <li>Тишина больших гор</li>
+          </ul>
+          <div class="foot"><span class="days">7 дней · 39 000 ₽</span><a class="more" href="#book">Подробнее <span class="ar">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- КБР Голубые озёра -->
+      <article class="tcard reveal">
+        <div class="media">
+          <span class="region">Кабардино-Балкария</span>
+          <div class="ph"><span class="ph-lbl">фото: бирюза<br>Голубых озёр</span></div>
+        </div>
+        <div class="body">
+          <h3>Кабардино-Балкария</h3>
+          <ul class="pts">
+            <li>Голубые озёра невероятной бирюзы</li>
+            <li>Черекская теснина</li>
+            <li>Загадочное Чёрное озеро</li>
+          </ul>
+          <div class="foot"><span class="days">7 дней · 39 000 ₽</span><a class="more" href="#book">Подробнее <span class="ar">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- Ингушетия -->
+      <article class="tcard reveal">
+        <div class="media">
+          <span class="region">Ингушетия</span>
+          <div class="ph"><span class="ph-lbl">фото: башенный<br>комплекс Вовнушки</span></div>
+        </div>
+        <div class="body">
+          <h3>Горная Ингушетия</h3>
+          <ul class="pts">
+            <li>Древние башенные комплексы</li>
+            <li>Глубокие ущелья и тропы</li>
+            <li>Каменные некрополи предков</li>
+          </ul>
+          <div class="foot"><span class="days">7 дней · 39 000 ₽</span><a class="more" href="#book">Подробнее <span class="ar">→</span></a></div>
+        </div>
+      </article>
+
+      <!-- Пятигорск -->
+      <article class="tcard reveal">
+        <div class="media">
+          <span class="region">Ставропольский край</span>
+          <img src="images/frozen-waterfall.png" alt="Медовые водопады">
+        </div>
+        <div class="body">
+          <h3>Пятигорск</h3>
+          <ul class="pts">
+            <li>Гора Кольцо и Медовые водопады</li>
+            <li>Небесные качели над обрывом</li>
+            <li>Зиплайн и адреналин</li>
+          </ul>
+          <div class="foot"><span class="days">7 дней · 39 000 ₽</span><a class="more" href="#book">Подробнее <span class="ar">→</span></a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ELBRUS FEATURE ============ -->
+<section class="section elbrus" id="elbrus">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow on-dark">Вершина Европы</span>
+      <div class="big-num">5642<span class="m"> м</span></div>
+    </div>
+    <div class="reveal">
+      <h2>Эльбрус — <span class="serif-it">крыша Европы</span></h2>
+      <p class="ev-lead">Две снежные вершины спящего вулкана, которые видно за сотню километров. Самая высокая гора России и всей Европы — и одна из главных причин приехать.</p>
+      <div class="ev-facts">
+        <div class="row"><span>Высота западной вершины</span><b>5 642 м</b></div>
+        <div class="row"><span>Высота восточной вершины</span><b>5 621 м</b></div>
+        <div class="row"><span>Возраст вулкана</span><b>~ 2,5 млн лет</b></div>
+        <div class="row"><span>Лучшее время увидеть</span><b>рассвет в облаках</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOTTO BAND ============ -->
+<section class="hero" style="min-height:62vh" aria-label="Девиз">
+  <div class="hero-bg"><img src="images/bench-motto.png" alt="Скамья с надписью «Счастье не за горами — оно в горах» на фоне Эльбруса"></div>
+  <div class="wrap hero-inner" style="padding-bottom:clamp(40px,7vh,80px)">
+    <p class="motto" style="font-size:var(--t-body);letter-spacing:.05em">Девиз наших путешествий</p>
+    <h2 style="font-size:var(--t-hero);color:#fff;font-style:italic;font-weight:500;text-shadow:0 4px 40px rgba(0,0,0,.5);max-width:18ch">Счастье не за горами — оно в горах</h2>
+  </div>
+</section>
+
+<!-- ============ CUISINE ============ -->
+<section class="section cuisine" id="cuisine">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow center">Кухня Кавказа</span>
+      <h2 class="h2">Вкус Кавказа — <span class="serif-it">отдельное путешествие</span></h2>
+      <p class="lead">Горный воздух пробуждает аппетит, а гостеприимство здесь измеряется тарелками. Вот что ждёт вас в пути.</p>
+    </div>
+    <div class="food-mosaic">
+      <article class="fcard reveal"><div class="media"><div class="ph"><span class="ph-lbl">фото: хычины</span></div></div><div class="body"><h3>Хычины</h3><p>Тонкие лепёшки с сыром и картофелем, с пылу с жару.</p></div></article>
+      <article class="fcard reveal"><div class="media"><div class="ph"><span class="ph-lbl">фото: осетинские пироги</span></div></div><div class="body"><h3>Осетинские пироги</h3><p>Три пирога на столе — древний символ гостеприимства.</p></div></article>
+      <article class="fcard reveal"><div class="media"><div class="ph"><span class="ph-lbl">фото: шашлык в горах</span></div></div><div class="body"><h3>Шашлык на углях</h3><p>Мясо на костре с видом на снежные вершины.</p></div></article>
+      <article class="fcard reveal"><div class="media"><div class="ph"><span class="ph-lbl">фото: горный чай</span></div></div><div class="body"><h3>Горный чай с травами</h3><p>Чабрец, мята и тепло, согревающее на перевале.</p></div></article>
+      <article class="fcard reveal"><div class="media"><div class="ph"><span class="ph-lbl">фото: чурчхела</span></div></div><div class="body"><h3>Чурчхела и сухофрукты</h3><p>Сладкий заряд энергии в дорогу по орехам и винограду.</p></div></article>
+      <article class="fcard reveal"><div class="media"><div class="ph"><span class="ph-lbl">фото: айран</span></div></div><div class="body"><h3>Айран и сыры</h3><p>Свежие кисломолочные продукты прямо с подворья.</p></div></article>
+    </div>
+    <p class="quote reveal">«Медовые водопады, хычины с пылу с жару — это тоже часть маршрута 😋»</p>
+  </div>
+</section>
+
+<!-- ============ GEOGRAPHY ============ -->
+<section class="section geo" id="geo">
+  <div class="wrap">
+    <div class="geo-intro reveal">
+      <span class="eyebrow">География</span>
+      <h2>От Минвод <span class="serif-it">до ледников</span></h2>
+      <p class="lead">Маршруты сплетают пять республик и сотни километров серпантинов. Вот где мы побываем.</p>
+      <div class="pins">
+        <span class="pin">Пятигорск</span>
+        <span class="pin">Архыз</span>
+        <span class="pin">Домбай</span>
+        <span class="pin">Эльбрус</span>
+        <span class="pin">Джилы-су</span>
+        <span class="pin">Нальчик</span>
+        <span class="pin">Безенги</span>
+        <span class="pin">Владикавказ</span>
+        <span class="pin">Даргавс</span>
+        <span class="pin">Магас</span>
+        <span class="pin">Грозный</span>
+      </div>
+    </div>
+    <div class="acc reveal" id="geoAcc">
+      <div class="acc-item open">
+        <button class="acc-q"><span class="idx">01</span><span class="qt">Приэльбрусье</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Сердце Кавказа: подножие Эльбруса, поляна Азау, ледники и канатные дороги. Отсюда открывается самый известный вид России.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">02</span><span class="qt">Домбай и Архыз</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Карачаево-Черкесия с её альпийскими лугами, бирюзовыми озёрами и видами, ради которых стоит подняться на канатке к облакам.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">03</span><span class="qt">Безенги</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Самый суровый и высокий горный узел Кавказа. Безенгийская стена и знаменитый Язык Тролля — место силы и эпичных кадров.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">04</span><span class="qt">Северная Осетия</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Кармадонское ущелье, древний Даргавс — «Город мёртвых», тёплое гостеприимство и легендарные осетинские пироги.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">05</span><span class="qt">Ингушетия и Чечня</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Средневековые башенные комплексы среди ущелий горной Ингушетии и современный вечерний Грозный-Сити — контраст эпох в одном дне.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INCLUDED ============ -->
+<section class="section incl" id="incl">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow on-dark">Что включено</span>
+      <h2 class="h2">Цена честная — <span class="serif-it">39 000 ₽</span></h2>
+    </div>
+    <div class="incl-grid">
+      <div class="incl-col reveal">
+        <h4>Входит в стоимость</h4>
+        <ul>
+          <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="#BE9450" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Трансфер по всему маршруту</li>
+          <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="#BE9450" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Проживание в уютных гостевых домах</li>
+          <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="#BE9450" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Завтраки и ужины</li>
+          <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="#BE9450" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Все экскурсии и входные билеты</li>
+          <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="#BE9450" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Авторское сопровождение Людмилы</li>
+          <li><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="#BE9450" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Фото и видео на память</li>
+        </ul>
+      </div>
+      <div class="incl-col reveal">
+        <h4>Оплачивается отдельно</h4>
+        <ul>
+          <li class="no"><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="rgba(244,238,226,.5)" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg> Авиа- и ж/д билеты до Минвод</li>
+          <li class="no"><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="rgba(244,238,226,.5)" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg> Обеды (по желанию)</li>
+          <li class="no"><svg class="mk" viewBox="0 0 24 24" fill="none" stroke="rgba(244,238,226,.5)" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg> Личные расходы и сувениры</li>
+        </ul>
+        <p style="margin-top:24px;color:rgba(244,238,226,.7);font-size:15px;max-width:32ch">Встреча группы — в аэропорту Минеральных Вод или в Нальчике. Дальше всё берём на себя.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow center">Отзывы</span>
+      <h2 class="h2">Уезжают <span class="serif-it">другими людьми</span></h2>
+      <p class="rev-note">[ сюда добавим живые видео, фото и скриншоты из канала ]</p>
+    </div>
+    <div class="rev-viewport reveal">
+      <div class="rev-track" id="revTrack">
+        <div class="rev-card">
+          <div class="rmedia"><div class="ph"><span class="ph-lbl">фото / видео<br>отзыва</span></div></div>
+          <div class="rev-body">
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text"><span class="qm">«</span>Приехала скептиком, уехала влюблённой. Людмила знает Кавказ как свои пять пальцев. Эльбрус, пироги, башни — за 7 дней мы объехали больше, чем я планировала за месяц.<span class="qm">»</span></p>
+            <div class="rev-who"><span class="av">М</span><div><b>Марина</b><span>Москва</span></div></div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rmedia"><div class="ph"><span class="ph-lbl">фото / видео<br>отзыва</span></div></div>
+          <div class="rev-body">
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text"><span class="qm">«</span>Язык Тролля в Безенги — это нечто. Стоишь на скале, а за спиной такая стена, что фото просто взрывают ленту. Тур окупился сторицей.<span class="qm">»</span></p>
+            <div class="rev-who"><span class="av">А</span><div><b>Алексей</b><span>Екатеринбург</span></div></div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rmedia"><div class="ph"><span class="ph-lbl">фото / видео<br>отзыва</span></div></div>
+          <div class="rev-body">
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text"><span class="qm">«</span>Ехали вдвоём, познакомились с удивительными людьми. Осетинские пироги у бабушки в горах — это не забудем никогда.<span class="qm">»</span></p>
+            <div class="rev-who"><span class="av">О</span><div><b>Ольга и Дмитрий</b><span>Санкт-Петербург</span></div></div>
+          </div>
+        </div>
+        <div class="rev-card">
+          <div class="rmedia"><div class="ph"><span class="ph-lbl">фото / видео<br>отзыва</span></div></div>
+          <div class="rev-body">
+            <div class="rev-stars">★★★★★</div>
+            <p class="rev-text"><span class="qm">«</span>Апрель был забронирован — взяла май. Не пожалела ни секунды. Кавказ перевернул мою картину мира.<span class="qm">»</span></p>
+            <div class="rev-who"><span class="av">Н</span><div><b>Наталья</b><span>Новосибирск</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rev-ctrl reveal">
+      <button class="rev-arrow" id="revPrev" aria-label="Предыдущий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <div class="rev-dots" id="revDots"></div>
+      <button class="rev-arrow" id="revNext" aria-label="Следующий"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TELEGRAM FEED ============ -->
+<section class="section tg" id="blog">
+  <div class="wrap">
+    <div class="head reveal">
+      <div>
+        <span class="eyebrow">Живой дневник</span>
+        <h2 class="h2" style="margin-top:.3em">Дневник <span class="serif-it">путешествий</span></h2>
+      </div>
+      <p class="lead">В канале — видео с маршрутов, стихи Людмилы и анонсы ближайших туров. Подпишись, чтобы быть в курсе.</p>
+    </div>
+    <div class="tg-grid">
+      <a class="pcard reveal" href="https://t.me/CaucasusTours73" target="_blank" rel="noopener">
+        <div class="media"><div class="ph"><span class="ph-lbl">кадр из поста:<br>рассвет на Эльбрусе</span></div></div>
+        <div class="body">
+          <div class="meta"><svg class="tgmark" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 2.9 11.4c-.9.4-.9 1.6 0 1.9l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.6-2.6 4.7 3.5c.6.4 1.5.1 1.6-.7l3-14.9c.2-.9-.7-1.6-1.5-1.2z"/></svg> @CaucasusTours73 · недавно</div>
+          <p>Утро встретили выше облаков. Эльбрус показался на пару минут — и группа замерла. Такое не передать словами.</p>
+          <span class="read">Читать в Telegram →</span>
+        </div>
+      </a>
+      <a class="pcard reveal" href="https://t.me/CaucasusTours73" target="_blank" rel="noopener">
+        <div class="media"><div class="ph"><span class="ph-lbl">кадр из поста:<br>осетинские пироги</span></div></div>
+        <div class="body">
+          <div class="meta"><svg class="tgmark" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 2.9 11.4c-.9.4-.9 1.6 0 1.9l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.6-2.6 4.7 3.5c.6.4 1.5.1 1.6-.7l3-14.9c.2-.9-.7-1.6-1.5-1.2z"/></svg> @CaucasusTours73 · недавно</div>
+          <p>Три пирога на столе, чай с чабрецом и разговоры до ночи. Кавказ кормит так, что уезжать не хочется.</p>
+          <span class="read">Читать в Telegram →</span>
+        </div>
+      </a>
+      <a class="pcard reveal" href="https://t.me/CaucasusTours73" target="_blank" rel="noopener">
+        <div class="media"><div class="ph"><span class="ph-lbl">кадр из поста:<br>Язык Тролля</span></div></div>
+        <div class="body">
+          <div class="meta"><svg class="tgmark" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 2.9 11.4c-.9.4-.9 1.6 0 1.9l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.6-2.6 4.7 3.5c.6.4 1.5.1 1.6-.7l3-14.9c.2-.9-.7-1.6-1.5-1.2z"/></svg> @CaucasusTours73 · недавно</div>
+          <p>Набор в новую группу открыт. Места разбирают быстро — апрель уже закрыт. Пишите, расскажу о датах.</p>
+          <span class="read">Читать в Telegram →</span>
+        </div>
+      </a>
+    </div>
+    <div class="tg-cta reveal">
+      <a class="btn btn-forest" href="https://t.me/CaucasusTours73" target="_blank" rel="noopener">Подписаться на канал</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="faq-side reveal">
+      <span class="eyebrow">Вопросы</span>
+      <h2>Коротко <span class="serif-it">о главном</span></h2>
+      <p class="lead">Не нашли ответ? Напишите Людмиле в Telegram — она ответит лично.</p>
+    </div>
+    <div class="acc reveal" id="faqAcc">
+      <div class="acc-item open">
+        <button class="acc-q"><span class="idx">01</span><span class="qt">Что включено в цену 39 000 ₽?</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Трансфер по маршруту, проживание, завтраки и ужины, все экскурсии и входные билеты, авторское сопровождение и фото на память. Не входят: билеты до Минвод, обеды и личные расходы.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">02</span><span class="qt">Как добраться до начала тура?</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Прилетайте в аэропорт Минеральных Вод или Нальчика — мы встретим вас и доставим к группе. Всё, что внутри тура, берём на себя.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">03</span><span class="qt">Какой нужен уровень подготовки?</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Средний. Специальных навыков и снаряжения не требуется — маршруты рассчитаны на обычных путешественников, которые любят гулять и дышать горным воздухом.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">04</span><span class="qt">Группы большие или маленькие?</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Только малые авторские группы. Так у каждого есть персональное внимание, а в дороге мы становимся почти семьёй.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">05</span><span class="qt">Когда ближайший тур?</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Расписание меняется и места разбирают быстро. Напишите Людмиле в Telegram — она подскажет актуальные даты под вас.</div></div>
+      </div>
+      <div class="acc-item">
+        <button class="acc-q"><span class="idx">06</span><span class="qt">Можно ли взять детей?</span><span class="pm"></span></button>
+        <div class="acc-a"><div class="inner">Да, от 10 лет в сопровождении взрослого. Дети легко переносят маршрут и обожают снежки на склонах Эльбруса.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="section book" id="book">
+  <div class="book-bg"><img src="images/dombai.png" alt="Горы Домбая"></div>
+  <div class="wrap">
+    <div class="book-copy reveal">
+      <span class="eyebrow on-dark">Бронирование</span>
+      <h2>Готовы <span class="serif-it">в путешествие?</span></h2>
+      <p class="lead">Заполните форму — мы соберём готовое сообщение, и уже через пару минут Людмила расскажет о ближайших датах в Telegram.</p>
+      <div class="links">
+        <a class="btn btn-primary" href="https://t.me/Ludmila_Bas" target="_blank" rel="noopener">Написать Людмиле</a>
+        <a class="btn btn-ghost-light" href="https://t.me/CaucasusTours73" target="_blank" rel="noopener">Смотреть канал</a>
+      </div>
+      <p class="fine">39 000 ₽ за 7 незабываемых дней. Цена фиксирована на все маршруты.</p>
+    </div>
+    <form class="bform reveal" id="bookForm">
+      <h3>Заявка на тур</h3>
+      <p class="fsub">Это займёт меньше минуты</p>
+      <div class="field">
+        <label for="bName">Ваше имя</label>
+        <input id="bName" name="name" type="text" placeholder="Как к вам обращаться" required>
+      </div>
+      <div class="field">
+        <label for="bTour">Какой тур интересует</label>
+        <select id="bTour" name="tour" required>
+          <option value="" disabled selected>Выберите маршрут</option>
+          <option>3 республики + Эльбрус (хит)</option>
+          <option>Эльбрус</option>
+          <option>Домбай</option>
+          <option>Осетия</option>
+          <option>Безенги</option>
+          <option>Кабардино-Балкария</option>
+          <option>Горная Ингушетия</option>
+          <option>Пятигорск</option>
+          <option>Пока выбираю</option>
+        </select>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="bDate">Желаемые даты</label>
+          <input id="bDate" name="date" type="text" placeholder="например, май">
+        </div>
+        <div class="field">
+          <label for="bPeople">Человек</label>
+          <select id="bPeople" name="people">
+            <option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary submit">Отправить в Telegram</button>
+      <p class="formnote">Сообщение скопируется автоматически — останется вставить его в чат с Людмилой.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="#hero">
+          <span class="mark">К</span>
+          <span class="bname"><b>Кавказ</b><span>Авторские туры</span></span>
+        </a>
+        <p class="fabout">Авторские туры на Кавказ с Людмилой Басыровой. Горы, которые шепчут нежность — и неделя, которая остаётся с тобой навсегда.</p>
+      </div>
+      <div>
+        <h5>Навигация</h5>
+        <ul>
+          <li><a href="#tours">Туры</a></li>
+          <li><a href="#elbrus">Эльбрус</a></li>
+          <li><a href="#cuisine">Кухня Кавказа</a></li>
+          <li><a href="#reviews">Отзывы</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Связаться</h5>
+        <ul>
+          <li><a href="https://t.me/CaucasusTours73" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 2.9 11.4c-.9.4-.9 1.6 0 1.9l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.6-2.6 4.7 3.5c.6.4 1.5.1 1.6-.7l3-14.9c.2-.9-.7-1.6-1.5-1.2z"/></svg> Telegram-канал</a></li>
+          <li><a href="https://t.me/Ludmila_Bas" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="currentColor"><path d="M21.5 4.3 2.9 11.4c-.9.4-.9 1.6 0 1.9l4.7 1.5 1.8 5.6c.2.7 1.1.9 1.6.3l2.6-2.6 4.7 3.5c.6.4 1.5.1 1.6-.7l3-14.9c.2-.9-.7-1.6-1.5-1.2z"/></svg> Написать Людмиле</a></li>
+          <li><a href="https://www.instagram.com/ludmila_basyrova/" target="_blank" rel="noopener"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>Авторские туры на Кавказ © 2025</span>
+      <span>Счастье не за горами — оно в горах</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <svg class="ti" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg>
+  <span id="toastMsg">Заявка скопирована — вставьте её в чат с Людмилой</span>
+</div>
+
+<!-- ============ VIDEO LIGHTBOX ============ -->
+<div class="vmodal" id="vmodal" role="dialog" aria-label="Видео с маршрута">
+  <div class="vmodal-backdrop" id="vmodalBackdrop"></div>
+  <div class="vmodal-inner">
+    <button class="vmodal-close" id="vmodalClose" aria-label="Закрыть">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <video class="vmodal-vid" id="vmodalVid" controls playsinline preload="metadata">
+      <source src="uploads/AQOH47vz4nAHChTFwMfBmmf4bB5_xZ6XS5kCyj4IxXgoVNOFm9EcMNI_cf24RPSYbleTk2eCN_hTMWvbH2_vTSZIaYDt77F6Tm3RTgA.mp4" type="video/mp4">
+    </video>
+    <p class="vmodal-cap">Живые кадры с маршрутов Людмилы Басыровой · Кавказ</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
